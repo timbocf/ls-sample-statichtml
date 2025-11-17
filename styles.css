@@ -1,0 +1,27 @@
+/* Custom CSS */
+
+/* Layer 2: Main Navbar (Must be on top) */
+.main-nav {
+    /* Critical: Ensures it sits above the hero */
+    z-index: 100; 
+    
+    /* Make the background fully transparent to see the hero */
+    background: transparent !important; 
+    
+    /* Give the links a light color since they'll be over a dark image */
+    color: white; 
+}
+
+/* Layer 1: Hero Image Setup */
+.hero-bg {
+    min-height: 85vh; 
+    background: url('images/hero-image.avif') no-repeat center center;
+    background-size: cover; 
+    /* Set a lower z-index than the navbar */
+    z-index: 1; 
+    
+    /* Critical: Adjust this padding to move the hero content down 
+       so it isn't covered by the main navigation. 
+       (e.g., if your navbar is 60px tall, use a slightly larger value) */
+    padding-top: 80px; 
+}
