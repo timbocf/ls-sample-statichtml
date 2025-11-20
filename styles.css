@@ -1,27 +1,140 @@
-/* Custom CSS */
+/* Custom CSS for Saguaro & Stone Landscaping */
 
-/* Layer 2: Main Navbar (Must be on top) */
-.main-nav {
-    /* Critical: Ensures it sits above the hero */
-    z-index: 100; 
-    
-    /* Make the background fully transparent to see the hero */
-    background: transparent !important; 
-    
-    /* Give the links a light color since they'll be over a dark image */
-    color: white; 
+:root {
+    --primary-color: #2c5e2e; /* Deep Green */
+    --secondary-color: #d4a373; /* Earthy Sand */
+    --dark-color: #1a1a1a;
+    --light-color: #f8f9fa;
+    --text-muted: #6c757d;
+    --font-sans: 'Inter', sans-serif;
+    --font-serif: 'Playfair Display', serif;
 }
 
-/* Layer 1: Hero Image Setup */
+body {
+    font-family: var(--font-sans);
+    color: var(--dark-color);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+}
+
+.font-serif {
+    font-family: var(--font-serif);
+}
+
+.letter-spacing-2 {
+    letter-spacing: 2px;
+}
+
+.text-light-opacity {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Navigation */
+.main-nav {
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: var(--secondary-color) !important;
+}
+
+/* Hero Section */
 .hero-bg {
-    min-height: 85vh; 
+    min-height: 100vh;
     background: url('images/hero-image.avif') no-repeat center center;
-    background-size: cover; 
-    /* Set a lower z-index than the navbar */
-    z-index: 1; 
-    
-    /* Critical: Adjust this padding to move the hero content down 
-       so it isn't covered by the main navigation. 
-       (e.g., if your navbar is 60px tall, use a slightly larger value) */
-    padding-top: 80px; 
+    background-size: cover;
+    background-attachment: fixed; /* Parallax effect */
+}
+
+.overlay {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #1e4220;
+    border-color: #1e4220;
+    transform: translateY(-2px);
+}
+
+.btn-outline-dark {
+    border-width: 2px;
+}
+
+.btn-outline-dark:hover {
+    background-color: var(--dark-color);
+    transform: translateY(-2px);
+}
+
+/* Services */
+.py-6 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: white;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 1rem 3rem rgba(0,0,0,0.1) !important;
+}
+
+.icon-box {
+    color: var(--primary-color);
+}
+
+/* Gallery */
+#gallery img {
+    transition: transform 0.5s ease;
+}
+
+#gallery img:hover {
+    transform: scale(1.02);
+}
+
+/* Contact */
+#contact {
+    background: var(--dark-color);
+}
+
+.form-control {
+    border-radius: 0.5rem;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border: 2px solid var(--primary-color);
+    background-color: white !important;
+}
+
+/* Footer */
+footer {
+    font-size: 0.9rem;
 }

@@ -1,63 +1,212 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Saguaro & Stone Landscaping" />
+    <meta name="description" content="Saguaro & Stone Landscaping - Transforming Outdoor Spaces" />
     <title>Saguaro & Stone Landscaping</title>
 
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico" />
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+
     <!-- Styles -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css" />
 
-    <!-- Recommended for progressive enhancement -->
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#2c3e50" />
 </head>
+
 <body>
 
-<header class="main-nav position-fixed w-100">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
-      <a class="navbar-brand" href="#">Saguaro & Stone Landscaping</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-    </nav>
-  </header>
+    <!-- Navigation -->
+    <header class="main-nav position-fixed w-100">
+        <nav class="navbar navbar-expand-lg navbar-dark container">
+            <a class="navbar-brand fw-bold" href="#">Saguaro & Stone</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-primary ms-lg-3 text-white px-4" href="#contact">Get
+                            a Quote</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-    <main id="main" role="main">
-        <header class="hero-bg position-relative d-flex align-items-center text-white text-center">
-        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-bg position-relative d-flex align-items-center text-white text-center">
+            <div class="overlay position-absolute top-0 start-0 w-100 h-100"></div>
+            <div class="container position-relative z-2">
+                <h1 class="display-2 fw-bold mb-3 font-serif">Transforming Outdoor Spaces</h1>
+                <p class="lead mb-5 col-lg-8 mx-auto text-light-opacity">
+                    Expert landscaping, hardscaping, and design services for your dream backyard.
+                </p>
+                <a href="#contact" class="btn btn-primary btn-lg px-5 py-3 rounded-pill shadow-lg">Start Your
+                    Project</a>
+            </div>
+        </section>
 
-        <div class="container position-relative py-5">
-            <h1 class="display-3 fw-bold mb-3">
-            The Future of Web Development Starts Here
-            </h1>
-            <p class="lead mb-4 col-lg-8 mx-auto">
-            Join our community today to unlock exclusive courses and tools designed for modern developers.
-            </p>
-            
-            <a href="#signup" class="btn btn-primary btn-lg px-4 me-md-2" role="button">
-            Get Started Now
-            </a>
-            <a href="#learn" class="btn btn-outline-light btn-lg px-4" role="button">
-            Learn More
-            </a>
-        </div>
-        </header>
+        <!-- Services Section -->
+        <section id="services" class="py-6 bg-light">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h6 class="text-primary text-uppercase letter-spacing-2 fw-bold">Our Services</h6>
+                    <h2 class="display-5 fw-bold text-dark">Crafting Nature's Beauty</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm service-card">
+                            <div class="card-body p-4 text-center">
+                                <div class="icon-box mb-3 text-primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
+                                        class="bi bi-flower1" viewBox="0 0 16 16">
+                                        <path
+                                            d="M6.174 1.184a2 2 0 0 1 3.652 0l.336 1.006c.16.478.65.766 1.15.677l1.03-.18a2 2 0 0 1 2.69 2.492l-.43 1.008c-.18.42.05.908.48 1.07l1.006.38a2 2 0 0 1 0 3.726l-1.006.38a1 1 0 0 0-.48 1.07l.43 1.008a2 2 0 0 1-2.69 2.492l-1.03-.18a1 1 0 0 0-1.15.677l-.336 1.006a2 2 0 0 1-3.652 0l-.336-1.006a1 1 0 0 0-1.15-.677l-1.03.18a2 2 0 0 1-2.69-2.492l.43-1.008a1 1 0 0 0-.48-1.07l-1.006-.38a2 2 0 0 1 0-3.726l1.006-.38a1 1 0 0 0 .48-1.07l-.43-1.008a2 2 0 0 1 2.69-2.492l1.03.18a1 1 0 0 0 1.15-.677l.336-1.006zM8 4.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7z" />
+                                    </svg>
+                                </div>
+                                <h3 class="h4 card-title fw-bold">Landscape Design</h3>
+                                <p class="card-text text-muted">Custom designs tailored to your lifestyle and local
+                                    climate.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm service-card">
+                            <div class="card-body p-4 text-center">
+                                <div class="icon-box mb-3 text-primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
+                                        class="bi bi-bricks" viewBox="0 0 16 16">
+                                        <path
+                                            d="M0 .5A.5.5 0 0 1 .5 0h15a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5H14v2h1.5a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5H14v2h1.5a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-3a.5.5 0 0 1 .5-.5H2v-2H.5a.5.5 0 0 1-.5-.5v-3A.5.5 0 0 1 .5 6H2V4H.5a.5.5 0 0 1-.5-.5v-3zM3 4v2h4.5V4H3zm5.5 0v2H13V4H8.5zM3 10v2h4.5v-2H3zm5.5 0v2H13v-2H8.5zM1 1v2h3.5V1H1zm4.5 0v2h5V1h-5zm6 0v2H15V1h-3.5zM1 7v2h3.5V7H1zm4.5 0v2h5V7h-5zm6 0v2H15V7h-3.5zM1 13v2h3.5v-2H1zm4.5 0v2h5v-2h-5zm6 0v2H15v-2h-3.5z" />
+                                    </svg>
+                                </div>
+                                <h3 class="h4 card-title fw-bold">Hardscaping</h3>
+                                <p class="card-text text-muted">Patios, walkways, and retaining walls built to last.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm service-card">
+                            <div class="card-body p-4 text-center">
+                                <div class="icon-box mb-3 text-primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
+                                        class="bi bi-moisture" viewBox="0 0 16 16">
+                                        <path
+                                            d="M13.5 0a.5.5 0 0 0 0 1H15v2.75h-.5a.5.5 0 0 0 0 1h.5V7.5h-1.5a.5.5 0 0 0 0 1H15v2.75h-.5a.5.5 0 0 0 0 1h.5V15h-1.5a.5.5 0 0 0 0 1h2a.5.5 0 0 0 .5-.5V.5a.5.5 0 0 0-.5-.5h-2zM7 1.5l.364-.343a.5.5 0 0 0-.728 0l-.002.002-.006.007-.022.023-.08.088a28.458 28.458 0 0 0-1.274 1.517c-.769.983-1.714 2.325-2.385 3.727C2.368 7.564 2 8.682 2 9.733 2 12.614 4.212 15 7 15s5-2.386 5-5.267c0-1.05-.368-2.169-.867-3.212-.671-1.402-1.616-2.744-2.385-3.727a28.458 28.458 0 0 0-1.354-1.605l-.022-.023-.006-.007-.002-.001L7 1.5zm0 0-.364-.343L7 1.5zm-.016.766L7 2.247l.016.019c.24.274.572.667.944 1.144.611.781 1.32 1.776 1.901 2.827H4.14c.58-1.051 1.29-2.046 1.9-2.827.373-.477.706-.87.945-1.144zM3 9.733c0-.755.244-1.612.638-2.496h6.724c.395.884.638 1.741.638 2.496C11 12.117 9.182 14 7 14s-4-1.883-4-4.267z" />
+                                    </svg>
+                                </div>
+                                <h3 class="h4 card-title fw-bold">Sod & Irrigation</h3>
+                                <p class="card-text text-muted">Lush green lawns and efficient water systems.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="py-6">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <img src="images/grass install along sidewalk.jpg" alt="Recent Project"
+                            class="img-fluid rounded-4 shadow-lg">
+                    </div>
+                    <div class="col-lg-6 ps-lg-5">
+                        <h6 class="text-primary text-uppercase letter-spacing-2 fw-bold">Our Work</h6>
+                        <h2 class="display-5 fw-bold text-dark mb-4">See the Difference</h2>
+                        <p class="lead text-muted mb-4">
+                            We take pride in every project we touch. From simple lawn renovations to complex
+                            hardscaping, our attention to detail is unmatched.
+                        </p>
+                        <a href="#contact" class="btn btn-outline-dark btn-lg rounded-pill px-4">View Portfolio</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-6 bg-dark text-white position-relative">
+            <div class="container position-relative z-2">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="display-5 fw-bold mb-4">Ready to Transform Your Yard?</h2>
+                        <p class="lead mb-5 text-light-opacity">
+                            Contact us today for a free consultation and quote. Let's bring your vision to life.
+                        </p>
+                        <div class="card bg-white text-dark border-0 shadow-lg rounded-4 p-4 p-md-5 text-start">
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="name" class="form-label fw-bold">Name</label>
+                                        <input type="text" class="form-control bg-light border-0 py-3" id="name"
+                                            placeholder="Your Name">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="email" class="form-label fw-bold">Email</label>
+                                        <input type="email" class="form-control bg-light border-0 py-3" id="email"
+                                            placeholder="name@example.com">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="message" class="form-label fw-bold">Message</label>
+                                        <textarea class="form-control bg-light border-0 py-3" id="message" rows="4"
+                                            placeholder="Tell us about your project..."></textarea>
+                                    </div>
+                                    <div class="col-12 mt-4">
+                                        <button type="submit"
+                                            class="btn btn-primary btn-lg w-100 py-3 fw-bold rounded-3">Send
+                                            Message</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer role="contentinfo">
-        <p>&copy; <span id="year"></span> Divine Connections Media</p>
+    <footer class="bg-black text-white py-4 text-center">
+        <div class="container">
+            <p class="mb-0 text-white-50">&copy; <span id="year"></span> Saguaro & Stone Landscaping. All rights
+                reserved.</p>
+        </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
     <script>
-        // Minimal script: set current year
         document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 50) {
+                document.querySelector('.navbar').classList.add('bg-dark', 'shadow-sm');
+                document.querySelector('.navbar').classList.remove('bg-transparent');
+            } else {
+                document.querySelector('.navbar').classList.remove('bg-dark', 'shadow-sm');
+                document.querySelector('.navbar').classList.add('bg-transparent');
+            }
+        });
     </script>
 </body>
+
 </html>
