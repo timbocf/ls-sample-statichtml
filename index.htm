@@ -57,6 +57,9 @@
         </div>
     </header>
 
+    <!-- ARIA live region for nav announcements -->
+    <div id="nav-announcer" class="visually-hidden" aria-live="polite" aria-atomic="true"></div>
+
     <main>
         <!-- Hero Section -->
         <section class="hero-bg position-relative d-flex align-items-center text-white text-center">
@@ -216,6 +219,58 @@
                 header.classList.remove('bg-dark', 'shadow-sm');
             }
         });
+
+        // Collapse mobile menu when it loses focus or when user clicks/taps outside it
+        (function () {
+            const collapseEl = document.getElementById('navbarNav');
+            const toggler = document.querySelector('.navbar-toggler');
+            if (!collapseEl || !toggler) return;
+
+            // helper to get Collapse instance
+            function getCollapseInstance() {
+                return bootstrap.Collapse.getInstance(collapseEl) || new bootstrap.Collapse(collapseEl, { toggle: false });
+            }
+
+            // Click/tap outside to close (apply at all sizes)
+            document.addEventListener('click', function (e) {
+                if (!collapseEl.classList.contains('show')) return;
+                const target = e.target;
+                if (collapseEl.contains(target) || toggler.contains(target)) return;
+                getCollapseInstance().hide();
+            }, { passive: true });
+
+            // When focus leaves the collapse (e.g., user tabs away), close it
+            collapseEl.addEventListener('focusout', function () {
+                // Delay to allow document.activeElement to update
+                setTimeout(function () {
+                    const active = document.activeElement;
+                    if (!collapseEl.contains(active) && !toggler.contains(active)) {
+                        getCollapseInstance().hide();
+                    }
+                }, 0);
+            });
+
+            // Close on Escape key (accessibility)
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' || e.key === 'Esc') {
+                    if (collapseEl.classList.contains('show')) {
+                        getCollapseInstance().hide();
+                        toggler.focus();
+                    }
+                }
+            });
+
+            // ARIA announcements for screen readers when collapse shows/hides
+            const announcer = document.getElementById('nav-announcer');
+            if (announcer) {
+                collapseEl.addEventListener('shown.bs.collapse', function () {
+                    announcer.textContent = 'Navigation menu opened';
+                });
+                collapseEl.addEventListener('hidden.bs.collapse', function () {
+                    announcer.textContent = 'Navigation menu closed';
+                });
+            }
+        })();
     </script>
 </body>
 
