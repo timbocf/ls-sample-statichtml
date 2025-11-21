@@ -141,6 +141,19 @@ h1, h2, h3, h4, h5, h6 {
     background: var(--dark-color);
 }
 
+/* Contact form button: swap background and text colors on hover */
+#contact .btn-primary {
+    transition: background-color 0.25s ease, color 0.25s ease, transform 0.15s ease;
+}
+
+#contact .btn-primary:hover,
+#contact .btn-primary:focus {
+    background-color: #ffffff;
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
 .form-control {
     border-radius: 0.5rem;
 }
